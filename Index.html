@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Online Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f4ff;
+      padding: 30px;
+    }
+    h1 {
+      color: #2447a8;
+    }
+    .tool {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 350px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Online Tools 🚀</h1>
+  <p>Welcome to my free tools website!</p>
+
+  <div class="tool">
+    <h2>Word Counter</h2>
+    <textarea id="words" placeholder="Write something here"></textarea>
+    <p id="count">Words: 0</p>
+  </div>
+
+  <script>
+    const words = document.getElementById("words");
+    words.addEventListener("input", function() {
+      const text = words.value.trim();
+      const count = text ? text.split(/\s+/).length : 0;
+      document.getElementById("count").textContent = "Words: " + count;
+    });
+  </script>
+</body>
+</html>
